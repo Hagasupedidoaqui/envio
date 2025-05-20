@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Haiti shipping Cargoa Cuba</title>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <script>
+    function enviarWhatsapp(servicio) {
+      const numero = '5351170828';
+      const mensaje = `Hola, estoy interesado en el servicio: ${servicio}`;
+      window.open(`https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`, '_blank');
+    }
+
+    function toggleInfo(id) {
+      const panel = document.getElementById(id);
+      panel.classList.toggle('hidden');
+    }
+  </script>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-white text-gray-800">
+  <!-- Menú principal -->
+  <header class="flex flex-col items-center py-6 bg-white shadow-md">
+    <nav class="flex justify-between items-center w-full max-w-6xl px-4">
+      <!-- Menú izquierdo -->
+      <ul class="flex gap-4 animate-pulse">
+        <li><a href="#servicios" class="hover:text-green-600 font-semibold">Servicios</a></li>
+        <li><a href="#promociones" class="hover:text-green-600 font-semibold">Promociones</a></li>
+      </ul>
+
+      <!-- Logo central animado -->
+      <div class="animate-bounce">
+        <img src="logo.png" alt="Logo" class="w-16 h-16 rounded-full shadow-lg" />
+      </div>
+
+      <!-- Menú derecho -->
+      <a href="#quienes-somos" class="text-green-700 font-bold hover:underline">¿Quiénes somos?</a>
+    </nav>
+  </header>
+
+  <!-- Carrusel -->
+  <section class="w-full overflow-hidden my-6">
+    <div class="flex animate-slide w-[300%]">
+      <img src="ENVÍOS.jpg" alt="Promo 1" class="w-full h-64 object-cover" />
+      <img src="ENVÍOS 1.jpg" alt="Promo 2" class="w-full h-64 object-cover" />
+      <img src="promo3.jpg" alt="Promo 3" class="w-full h-64 object-cover" />
+    </div>
+    <style>
+      @keyframes slide {
+        0% { transform: translateX(0); }
+        33% { transform: translateX(-100%); }
+        66% { transform: translateX(-200%); }
+        100% { transform: translateX(0); }
+      }
+      .animate-slide {
+        animation: slide 12s infinite ease-in-out;
+      }
+    </style>
+  </section>
+
+  <!-- Promociones -->
+  <section id="promociones" class="bg-yellow-100 py-6">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-2xl font-bold mb-6 text-green-800">Promociones y Ofertas</h2>
+      <div class="grid md:grid-cols-3 gap-4">
+        <div class="relative">
+          <img src="oferta1.jpg" alt="Oferta 1" class="rounded-xl shadow-md w-full h-48 object-cover">
+          <span class="absolute top-2 left-2 bg-red-500 text-white px-3 py-1 text-sm rounded-full animate-bounce">Rebaja 20%</span>
+        </div>
+        <div class="relative">
+          <img src="oferta2.jpg" alt="Oferta 2" class="rounded-xl shadow-md w-full h-48 object-cover">
+          <span class="absolute top-2 left-2 bg-red-500 text-white px-3 py-1 text-sm rounded-full animate-bounce">Rebaja 15%</span>
+        </div>
+        <div class="relative">
+          <img src="oferta3.jpg" alt="Oferta 3" class="rounded-xl shadow-md w-full h-48 object-cover">
+          <span class="absolute top-2 left-2 bg-red-500 text-white px-3 py-1 text-sm rounded-full animate-bounce">Rebaja 10%</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Servicios -->
+  <section id="servicios" class="py-10 max-w-6xl mx-auto px-4">
+    <h2 class="text-3xl font-bold text-center mb-8 text-green-700">Servicios que Ofrecemos</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+      <div class="bg-white p-6 rounded-xl shadow-lg text-center border border-green-200">
+        <h3 class="text-xl font-semibold mb-4">Envío de paquetes</h3>
+        <p class="mb-4">Rápido y seguro a cualquier provincia de Cuba.</p>
+        <button onclick="enviarWhatsapp('Envío de paquetes')" class="bg-green-500 text-white px-4 py-2 rounded-full hover:bg-green-600 transition">Contactar</button>
+        <button onclick="toggleInfo('info1')" class="ml-4 text-yellow-600 hover:underline">Ver más</button>
+        <div id="info1" class="hidden mt-4 bg-green-50 border border-green-300 p-4 rounded-lg transition-all duration-500">
+          <p>Ofrecemos rastreo en tiempo real, embalaje profesional y atención personalizada para tus envíos.</p>
+          <button onclick="toggleInfo('info1')" class="mt-2 text-sm text-red-500 hover:underline">Cerrar</button>
+        </div>
+      </div>
+      <div class="bg-white p-6 rounded-xl shadow-lg text-center border border-green-200">
+        <h3 class="text-xl font-semibold mb-4">Cargas familiares</h3>
+        <p class="mb-4">Soluciones eficientes para tus envíos familiares.</p>
+        <button onclick="enviarWhatsapp('Cargas familiares')" class="bg-green-500 text-white px-4 py-2 rounded-full hover:bg-green-600 transition">Contactar</button>
+        <button onclick="toggleInfo('info2')" class="ml-4 text-yellow-600 hover:underline">Ver más</button>
+        <div id="info2" class="hidden mt-4 bg-green-50 border border-green-300 p-4 rounded-lg transition-all duration-500">
+          <p>Garantizamos envíos seguros de artículos personales, alimentos, medicamentos y más a tus seres queridos.</p>
+          <button onclick="toggleInfo('info2')" class="mt-2 text-sm text-red-500 hover:underline">Cerrar</button>
+        </div>
+      </div>
+      <div class="bg-white p-6 rounded-xl shadow-lg text-center border border-green-200 sm:col-span-2">
+        <h3 class="text-xl font-semibold mb-4">Envío exprés</h3>
+        <p class="mb-4">Entrega en tiempo récord garantizado.</p>
+        <button onclick="enviarWhatsapp('Envío exprés')" class="bg-green-500 text-white px-4 py-2 rounded-full hover:bg-green-600 transition">Contactar</button>
+        <button onclick="toggleInfo('info3')" class="ml-4 text-yellow-600 hover:underline">Ver más</button>
+        <div id="info3" class="hidden mt-4 bg-green-50 border border-green-300 p-4 rounded-lg transition-all duration-500">
+          <p>Servicio premium para entregas urgentes con prioridad máxima y seguimiento personalizado.</p>
+          <button onclick="toggleInfo('info3')" class="mt-2 text-sm text-red-500 hover:underline">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonios Slider -->
+  <section class="bg-green-50 py-10">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-6 text-green-700">Testimonios</h2>
+      <div class="relative w-full overflow-hidden">
+        <div class="flex w-[200%] animate-testimonio-slide">
+          <div class="w-full p-4">
+            <div class="bg-white p-6 rounded-xl shadow-md">
+              <p class="italic">"Excelente servicio, mis paquetes siempre llegan a tiempo. ¡Muy recomendados!"</p>
+              <p class="mt-2 font-semibold text-green-700">- Bernardo P.</p>
+            </div>
+          </div>
+          <div class="w-full p-4">
+            <div class="bg-white p-6 rounded-xl shadow-md">
+              <p class="italic">"Una atención recomendable. Me ayudaron en todo momento."</p>
+              <p class="mt-2 font-semibold text-green-700">- Teresa Fuentes.</p>
+            </div>
+          </div>
+          <div class="w-full p-4">
+            <div class="bg-white p-6 rounded-xl shadow-md">
+              <p class="italic">"Una excelente atención."</p>
+              <p class="mt-2 font-semibold text-green-700">- Teresa Fuentes.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <style>
+      @keyframes testimonio-slide {
+        0%, 45% { transform: translateX(0); }
+        50%, 95% { transform: translateX(-100%); }
+        100% { transform: translateX(0); }
+      }
+      .animate-testimonio-slide {
+        animation: testimonio-slide 12s infinite ease-in-out;
+      }
+    </style>
+  </section>
+
+  <!-- ¿Quiénes Somos? -->
+  <section id="quienes-somos" class="bg-yellow-50 py-10 px-4">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-4 text-green-700">¿Quiénes Somos?</h2>
+      <p class="mb-6">Somos una agencia de paquetería con años de experiencia en envíos a Cuba. Nos destacamos por nuestra rapidez, seguridad y atención personalizada.</p>
+      <div class="flex justify-center space-x-6 mb-4 text-2xl">
+        <a href="https://facebook.com" class="text-blue-600 animate-pulse" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="https://chat.whatsapp.com/tuGrupo" class="text-green-500 animate-pulse" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://instagram.com" class="text-pink-500 animate-pulse" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://t.me/tuCanal" class="text-blue-400 animate-pulse" target="_blank"><i class="fab fa-telegram"></i></a>
+      </div>
+      <p class="font-semibold text-green-800">
+        <a href="https://wa.me/5351170828" class="underline hover:text-green-600">+53 511 70828</a> /
+        <a href="https://wa.me/5352001234" class="underline hover:text-green-600">+53 5200 1234</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- Botón flotante -->
+  <a href="https://wa.me/5351170828" target="_blank" class="fixed bottom-4 right-4 bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 animate-bounce z-50">
+    <i class="fab fa-whatsapp fa-lg"></i>
+  </a>
+</body>
+</html>
